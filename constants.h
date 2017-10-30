@@ -1,6 +1,20 @@
 #ifndef CONSTANTS_H_INCLUDED
 #define CONSTANTS_H_INCLUDED
 
+#define N 2                         // total number of neurons
+
+//#define N_E 10000                   // number of excitatory neurons
+
+//#define N_I 2500                    // number of inhibitory neurons
+
+//#define g 5.0                       // connection strength ratio: g = J_I/J_E
+
+//#define C_E 1000                    // number of excitatory connections for each neuron: C_E = 0.1 * N_E
+
+//#define C_I 250                     // number of inhibitory connections for each neuron: C_I = 0.1 * N_I//
+
+//#define C_EXT 1000                  // number of excitatory connections from outside the network: C_EXT = C_E
+
 #define V_RESET 0.0                 // initial membrane potential: Vr (mV)
 
 #define V_THR 20.0                  // firing threshold: theta (mV)

@@ -1,76 +1,47 @@
 #include "neuron.h"
-#include "simulation.h"
+#include "network.h"
 #include "constants.h"
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
     //double time(0.0);
-    int steps(0);
-    int steps_sim(2000);
-    int a(200);
-    int b(1200);
-    double current_input(3.0);
-    double current(0.0);
-    //Simulation s(time_sim,current_input);
-    Neuron n(current);
+    int steps(0);                               // time (steps) counter
+    int steps_total(2000);                      // time (steps) total
+    int input_start(200);                       // time (steps) of start of current input
+    int input_end(1200);                        // time (steps) of end of current input
+
+    double current(75);                         // external current input
+
+    Network brain;                              // create network
+    brain.create_neurons();                     // create neurons in the network
+    brain.create_connections();                 // create connection between neurons
 
     // increment the simulation time by one step (time = n*h, n = steps)
-    while(steps <= steps_sim)
-        {
-            if(a <= steps && steps <= b)
-                current = current_input;
-            else current = 0.0;
-            n.update(current);
-            //time += TIME_UNIT;
-            ++steps;
-        }
+    while(steps < steps_total)
+    {
+        if((steps < input_start ) || (steps > input_end))
+            brain.update_neurons(0.0);
+        else brain.update_neurons(current);
+        //time = steps * TIME_UNIT;
+        ++steps;
+    }
 
-    // store membrane potential values
-    if(!n.getPotentials_at_times().empty())
-        {
-            ofstream file;
-            file.open("file.txt");
-            for(unsigned int i(0); i <= n.getPotentials_at_times().size(); ++i)
-                {
-                    file << n.getPotentials_at_times()[i] << " ";
-                }
-            file.close();
-        }
+    brain.store_membrane_potentials();          // saves the value of each neurons membrane potential at each step of the simulation
 
     // display values
-    cout << "Membrane potential: " << n.getV() << endl;
-    cout << "Number of spikes emitted by the neuron: " << n.getSpikes() << endl;
-    cout << "Time steps of last spike emitted by the neuron: " << n.getLast_spike_time() << endl;
-
-    cout << "Collection of spikes (time steps): ";
-    if(!n.getSpikes_times().empty())
-        {
-            for(unsigned int i(0); i <= n.getSpikes_times().size(); ++i)
-                {
-                    cout << n.getSpikes_times()[i] << " | ";
-                }
-            cout << endl;
-        }
-    else cout << "- " << endl;
-
-    cout << "Collection of membrane potentials: ";
-    ifstream file;
-    file.open("file.txt");
-    if(file.is_open())
-        {
-            string line;
-            while(getline(file,line))
-                {
-                    cout << line << endl;
-                }
-            file.close();
-        }
-    else cout << "Error opening file" << endl;
+    for(int i(0); i < N; ++i)
+    {
+        cout << "Neuron #" << i+1 << endl;
+        cout << " - Number of connections: " << brain.getNeuron_collection()[i].getConnections().size() << endl;
+        cout << " - Membrane potential (mV): " << brain.getNeuron_collection()[i].getPotential() << endl;
+        cout << " - Number of spikes emitted by the neuron: " << brain.getNeuron_collection()[i].getTotal_spikes_number() << endl;
+        cout << " - Time (steps) of last spike emitted by the neuron: " << brain.getNeuron_collection()[i].getLast_spike_time() << endl;
+    }
 
     return 0;
 }
