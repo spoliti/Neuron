@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1509803792 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\main.cpp
+	"neuron.h"
+	"network.h"
+	"constants.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<random>
+
+1509742570 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\neuron.h
+	"constants.h"
+	<vector>
+
+1508162208 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\simulation.h
+
+1509807844 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\neuron.cpp
+	"neuron.h"
+	<iostream>
+	<cmath>
+	<random>
+	<chrono>
+
+1509808292 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\constants.h
+
+1509803440 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\network.h
+	"neuron.h"
+	<vector>
+
+1509805333 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\codeblocks\neuron\network.cpp
+	"network.h"
+	<iostream>
+	<fstream>
+	<random>
+
