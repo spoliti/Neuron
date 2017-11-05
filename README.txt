@@ -1,0 +1,11 @@
+Simulation d'un reseau de neurones:
+ - 12500 neurones
+ - 2000 steps (0.1ms par step)
+ - constantes.h contient toutes les constantes necessaire pour le programme
+ - Graphique 1: 50 neurones choisis aux hazard, plot des spikes produites chaque step 
+ - Graphique 2: total de spikes produites chaque step
+ - Images: contiens les graphiques de qutre cas differents, en dependant de deux constantes (g,nu)
+		- g=3, nu=2
+		- g=6, nu=4
+		- g=5, nu=2
+		- g=4.5, nu=0.9

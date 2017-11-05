@@ -100,7 +100,7 @@ void Neuron::update()
     external_connections();
 
     // the buffer vector to implement the spike's transmission delay: the last element contains the number of spikes that the neuron receives at this time (step)
-    spikes_received = buffer[(TRANSMISSION_DELAY/TIME_UNIT)-1];
+    spikes_received = buffer[(int)(TRANSMISSION_DELAY/TIME_UNIT)-1];
     buffer.pop_back();
     buffer.insert(buffer.begin(), 0);
 

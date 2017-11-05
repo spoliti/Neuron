@@ -33,3 +33,54 @@
 	<fstream>
 	<random>
 
+1509803792 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\src\main.cpp
+	"neuron.h"
+	"network.h"
+	"constants.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<random>
+
+1509742570 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\src\neuron.h
+	"constants.h"
+	<vector>
+
+1509808292 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\src\constants.h
+
+1509803440 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\src\network.h
+	"neuron.h"
+	<vector>
+
+1509838501 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\neuron.cpp
+	"neuron.h"
+	<iostream>
+	<cmath>
+	<random>
+	<chrono>
+
+1509742570 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\neuron.h
+	"constants.h"
+	<vector>
+
+1509841345 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\constants.h
+
+1509838741 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\main.cpp
+	"neuron.h"
+	"network.h"
+	"constants.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<random>
+
+1509803440 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.h
+	"neuron.h"
+	<vector>
+
+1509838335 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.cpp
+	"network.h"
+	<iostream>
+	<fstream>
+	<random>
+

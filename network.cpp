@@ -68,29 +68,48 @@ void Network::create_connections()
 
 void Network::store_information(unsigned int number, unsigned int start_time, unsigned int end_time)
 {
+    // store the variables
+    std::ofstream file_variables;
+    file_variables.open("file_variables.txt");
+    file_variables << number << ", " << start_time << ", " << end_time;
+    file_variables.close();
+
     // store the times (steps) at which spikes occur for n random neurons
     std::default_random_engine generator;
     std::uniform_int_distribution<unsigned int> distribution(0, N-1);
     int index(0);
     std::ofstream file;
     file.open("file.txt");
-    for(unsigned int  i(1); i <= number; ++i)
+    unsigned int counter(0);        // will be incremented each time a neuron is determined to have no spikes within the given time-range
+    for(unsigned int  i(0); i < number; ++i)
     {
         index = distribution(generator);
-        for(unsigned int k(0); k < neuron_collection[index].getSpikes_collection().size(); ++k)
+        unsigned int counter_local(0);      // will be incremented each time a spike not within the given time-range
+        if(neuron_collection[index].getSpikes_collection().empty())
+            ++counter;
+        else for(unsigned int k(0); k < neuron_collection[index].getSpikes_collection().size(); ++k)
         {
             unsigned int spike_time = neuron_collection[index].getSpikes_collection()[k];
             if((start_time <= spike_time) && (end_time >= spike_time))
                 file << spike_time << ", ";
+            else ++counter_local;
+            if(counter_local == neuron_collection[index].getSpikes_collection().size())
+                ++counter;
         }
         file << std::endl;
+    }
+    if(counter == number)
+    {
+        std::cout << "No spikes were produced (by 50 randomly chosen neurons) between steps " << start_time << " and " << end_time << std::endl;
     }
     file.close();
 
     // store the number of spikes being produced in the network at each time (step)
     std::ofstream file_total;
     file_total.open("file_total.txt");
-    for(unsigned int j(start_time); j <= end_time; ++j)
+    if (spikes_collection.empty())
+        std::cout << "No spikes were produced between steps " << start_time << " and " << end_time << std::endl;
+    else for(unsigned int j(start_time); j <= end_time; ++j)
         file_total << spikes_collection[j] << ", ";
     file_total.close();
 }
