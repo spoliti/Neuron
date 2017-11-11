@@ -63,9 +63,9 @@
 	"constants.h"
 	<vector>
 
-1510233065 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\constants.h
+1510411056 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\constants.h
 
-1510226789 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\main.cpp
+1510411058 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\main.cpp
 	"neuron.h"
 	"network.h"
 	"constants.h"
@@ -78,9 +78,10 @@
 	"neuron.h"
 	<vector>
 
-1509919893 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.cpp
+1510412117 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.cpp
 	"network.h"
 	<iostream>
 	<fstream>
 	<random>
+	<string>
 

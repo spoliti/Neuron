@@ -19,9 +19,9 @@
 
 #define REFRACTORY_PERIOD 2.0       // refractory period: tau_rp (ms)
 
-#define G_RATIO 4.5                 // connection strength ratio: g = J_I/J_E
+#define G_RATIO 5.0                 // connection strength ratio: g = J_I/J_E
 
-#define NU_RATIO 0.9                // firing rate ration: NU=nu_ext/nu_thr
+#define NU_RATIO 2.0                // firing rate ration: NU=nu_ext/nu_thr
 
 #define V_THR 20.0                  // firing threshold: theta (mV)
 

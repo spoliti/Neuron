@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <random>
+#include <string>
 
 Network::Network():
     steps(0),
@@ -78,14 +79,16 @@ void Network::update_neurons()
 void Network::store_information(unsigned int number, unsigned int start_time, unsigned int end_time)
 {
 // store the variables
+    const char *path = "C:/Users/Stefano/Documents/EPFL/SV II (2017-18)/Projet en Informatique/Files/Neuron/files/file_variables.txt";
     std::ofstream file_variables;
-    file_variables.open("file_variables.txt");
+    file_variables.open(path);
     file_variables << number << ", " << start_time << ", " << end_time;
     file_variables.close();
 
 // store the times (steps) at which spikes occur for n random neurons
+    const char *path_2 = "C:/Users/Stefano/Documents/EPFL/SV II (2017-18)/Projet en Informatique/Files/Neuron/files/file.txt";
     std::ofstream file;
-    file.open("file.txt");
+    file.open(path_2);
 
     // allows to generate random numbers
     std::default_random_engine generator;
@@ -145,8 +148,9 @@ void Network::store_information(unsigned int number, unsigned int start_time, un
 
 
 // store the number of spikes produced in the network at each step
+    const char *path_3 = "C:/Users/Stefano/Documents/EPFL/SV II (2017-18)/Projet en Informatique/Files/Neuron/files/file_total.txt";
     std::ofstream file_total;
-    file_total.open("file_total.txt");
+    file_total.open(path_3);
 
     // WARNING: if no spikes were produced by the network within the given time-range
     if (spikes_collection.empty())

@@ -1,4 +1,4 @@
-Simulation d'un reseau de neurones:
+﻿Simulation d'un reseau de neurones:
  - 12500 neurones
  - constantes.h contient toutes les constantes necessaire pour le programme
  - plot 1: spikes produites par 50 neurones choisis aux hazard a chaque step, pour un intervalle de temps donné
@@ -9,4 +9,5 @@ Simulation d'un reseau de neurones:
 	- B: g=6, nu=4 (fast oscillating global activity, neurons firing irregularly at low rates)
 	- C: g=5, nu=2 (stationary global activity, neurons firing irregularly)
 	- D: g=4.5, nu=0.9 (slow oscillating glabal activity, neurons firing irregularly at very low rates)
- - simulation run over a pre-defined number of steps (0.1ms), of which a certain range is considered for the plots
+ - files: contiens les fichiers .txt et le script matlab nécessaires pour les plots (voir main.cpp)
+ - simulation sur un nombre pré-defini de steps (0.1ms), dont une partie est selectioné pour les plots (voir main.cpp)

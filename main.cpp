@@ -11,7 +11,7 @@ using namespace std;
 int main()
 {
     int steps(0);                                 // time (steps) counter
-    int steps_total(12000);                        // time (steps) total
+    int steps_total(2000);                        // time (steps) total
 
     Network brain;                                // create network
     brain.create_neurons();                       // create neurons in the network
@@ -26,8 +26,8 @@ int main()
 
     // store information for a number of neurons, within a time-range
     unsigned int number(50);
-    unsigned int start_time(10000);
-    unsigned int end_time(12000);
+    unsigned int start_time(1000);
+    unsigned int end_time(2000);
     brain.store_information(number, start_time, end_time);
 
     return 0;
