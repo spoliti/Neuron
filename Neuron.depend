@@ -52,20 +52,20 @@
 	"neuron.h"
 	<vector>
 
-1509838501 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\neuron.cpp
+1509922060 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\neuron.cpp
 	"neuron.h"
 	<iostream>
 	<cmath>
 	<random>
 	<chrono>
 
-1509742570 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\neuron.h
+1510233045 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\neuron.h
 	"constants.h"
 	<vector>
 
-1509841345 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\constants.h
+1510233065 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\constants.h
 
-1509838741 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\main.cpp
+1510226789 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\main.cpp
 	"neuron.h"
 	"network.h"
 	"constants.h"
@@ -74,11 +74,11 @@
 	<vector>
 	<random>
 
-1509803440 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.h
+1509920049 c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.h
 	"neuron.h"
 	<vector>
 
-1509838335 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.cpp
+1509919893 source:c:\users\stefano\documents\epfl\sv ii (2017-18)\projet en informatique\files\neuron\network.cpp
 	"network.h"
 	<iostream>
 	<fstream>

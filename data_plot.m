@@ -13,15 +13,19 @@ if(M == 0)
     str = 'No spikes were produced for the given time-range';
     annotation('textbox', dim, 'String',str, 'FitBoxToText', 'on')
 else
+    m_x = size(M,1);
     m_y = size(M,2);
     figure
     j = 1;
     while(j <= m_y)
         i = 1;
-        while(i <= n)
+        while(i <= m_x)
             axis([t_start t_end 0 n])
             if(M(i,j) ~= 0)    
                 plot(M(i,j), i, 'k.')
+                hold on
+            else
+                plot(M(i,j), i, 'w.')
                 hold on
             end
             i = i+1;
